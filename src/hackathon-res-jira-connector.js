@@ -8,8 +8,8 @@ const hackathonResJiraConnector = {
     var jira = new JiraApi({
       protocol: 'https',
       host: 'jira.actano.de',
-      username: 'xxx',
-      password: 'xxx',
+      username: process.env.JIRA_USER,
+      password: process.env.JIRA_PASSWORD,
       apiVersion: '2',
       strictSSL: true
     });
