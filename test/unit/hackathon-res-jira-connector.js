@@ -18,7 +18,7 @@ describe('hackathonResJiraConnector', () => {
       spy(hackathonResJiraConnector, 'resources');
     });
 
-    it.skip('should have been run once', async function() {
+    it('should have been run once', async function() {
       const result = await hackathonResJiraConnector.jira();
       console.log(result)
       console.log('Search-Result: ' + JSON.stringify(result, null, 4));

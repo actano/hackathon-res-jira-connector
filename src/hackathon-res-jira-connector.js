@@ -4,7 +4,7 @@ import babel_polyfill from "babel-polyfill";
 import request from 'supertest'
 
 const hackathonResJiraConnector = {
-  greet: async function() {
+  jira: async function() {
     var jira = new JiraApi({
       protocol: 'https',
       host: 'jira.actano.de',
@@ -16,7 +16,7 @@ const hackathonResJiraConnector = {
     let issues = await jira.searchJira('project=RES AND Created>2017-05-29');
     return issues // jira.searchJira('issue=RX-9853') jira.searchJira('Created>2017-05-30')
   },
-  put: async function() {
+  resources: async function() {
     const app = `http://localhost:4200`;
     const payload = {
       "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
@@ -194,7 +194,7 @@ const hackathonResJiraConnector = {
     };
     return await request(app)
       .post(`/v2/entities?a=59132b99e4b07618a2df0af2`)
-      .set('Authorization', 'bearer d23c2185-a49b-4a91-ba23-3caa74abd8e3')
+      .set('Authorization', 'bearer dea5bd6e-a38c-4add-ab5b-0452e219df1e')
       .set('Content-Type', 'application/json')
       .send(JSON.stringify(payload))
   }
