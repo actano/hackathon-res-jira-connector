@@ -54,5 +54,8 @@
   "babelBoilerplateOptions": {
     "entryFileName": "hackathon-res-jira-connector.js",
     "mainVarName": "hackathonResJiraConnector"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.13.0"
   }
 }

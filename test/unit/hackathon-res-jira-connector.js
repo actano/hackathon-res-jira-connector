@@ -1,5 +1,16 @@
 import hackathonResJiraConnector from '../../src/hackathon-res-jira-connector';
 
+var mochaAsync = (fn) => {
+  return async(done) => {
+    try {
+      await fn();
+      done();
+    } catch (err) {
+      done(err);
+    }
+  };
+};
+
 describe('hackathonResJiraConnector', () => {
   describe('Greet function', () => {
     beforeEach(() => {
@@ -7,12 +18,11 @@ describe('hackathonResJiraConnector', () => {
       hackathonResJiraConnector.greet();
     });
 
-    it('should have been run once', () => {
-      expect(hackathonResJiraConnector.greet).to.have.been.calledOnce;
+    it('should have been run once', async function(done) {
+      const result = await hackathonResJiraConnector.greet();
+      console.log(result);
+      done()
     });
 
-    it('should have always returned hello', () => {
-      expect(hackathonResJiraConnector.greet).to.have.always.returned('hello');
-    });
   });
 });
