@@ -12,7 +12,7 @@ const hackathonResJiraConnector = {
       apiVersion: '2',
       strictSSL: true
     });
-    const result = await jira.searchJira('assignee=lmenzel AND Created>2017-05-12')  // searchJira('assignee=mtolkiehn') jira.searchJira('issue=RX-9853')
+    const result = await jira.searchJira('project=RES')  // searchJira('assignee=mtolkiehn') jira.searchJira('issue=RX-9853') jira.searchJira('Created>2017-05-30')
       .then(function(result) {
         console.log(result)
         console.log('Search-Result: ' + JSON.stringify(result, null, 4));
