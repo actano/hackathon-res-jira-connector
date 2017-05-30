@@ -19,7 +19,7 @@ describe('hackathonResJiraConnector', () => {
     });
 
     it('should have been run once', async function() {
-      const result = await hackathonResJiraConnector.greet();
+      const result = await hackathonResJiraConnector;
       console.log(result);
     });
 
