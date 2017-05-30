@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/actano/hackathon-res-jira-connector/issues"
   },
-  "homepage": "https://github.com/actano/hackathon-res-jira-connector#readme"
+  "homepage": "https://github.com/actano/hackathon-res-jira-connector#readme",
+  "dependencies": {
+    "jira-client": "^6.4.0"
+  }
 }
