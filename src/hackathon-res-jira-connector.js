@@ -15,7 +15,7 @@ const hackathonResJiraConnector = {
     const result = await jira.searchJira('issue=RX-9853')  // searchJira('assignee=mtolkiehn')
       .then(function(result) {
         console.log(result)
-        console.log('Fields: ' + result.issues[0].fields);
+        console.log('Search-Result: ' + JSON.stringify(result, null, 4));
       })
       .catch(function(err) {
         console.error(err);
