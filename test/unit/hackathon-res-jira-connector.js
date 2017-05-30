@@ -12,22 +12,14 @@ var mochaAsync = (fn) => {
 };
 
 describe('hackathonResJiraConnector', () => {
-  describe('Greet function', () => {
+  describe('Import To Resources', () => {
     beforeEach(() => {
       spy(hackathonResJiraConnector, 'jira');
-      spy(hackathonResJiraConnector, 'resources');
     });
 
     it('should have been run once', async function() {
       const result = await hackathonResJiraConnector.jira();
-      console.log(result)
       console.log('Search-Result: ' + JSON.stringify(result, null, 4));
     });
-
-    it('should post data to resource', async function() {
-      const result = await hackathonResJiraConnector.resources();
-      console.log(result)
-    })
-
   });
 });
