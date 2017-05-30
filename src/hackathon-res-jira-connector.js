@@ -12,14 +12,7 @@ const hackathonResJiraConnector = {
       apiVersion: '2',
       strictSSL: true
     });
-    return jira.searchJira('project=RES')  // searchJira('assignee=mtolkiehn') jira.searchJira('issue=RX-9853') jira.searchJira('Created>2017-05-30')
-      .then(function(result) {
-        console.log(result)
-        console.log('Search-Result: ' + JSON.stringify(result, null, 4));
-      })
-      .catch(function(err) {
-        console.error(err);
-      });
+    return await jira.searchJira('assignee=mtolkiehn') // jira.searchJira('issue=RX-9853') jira.searchJira('Created>2017-05-30')
   }
 };
 
