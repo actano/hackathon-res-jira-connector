@@ -1,0 +1,19 @@
+{
+  "name": "hackathon-res-jira-connector",
+  "version": "0.0.1",
+  "description": "Jira Connector for Resources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lfmenzel@github.com/actano/hackathon-res-jira-connector.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/actano/hackathon-res-jira-connector/issues"
+  },
+  "homepage": "https://github.com/actano/hackathon-res-jira-connector#readme"
+}
