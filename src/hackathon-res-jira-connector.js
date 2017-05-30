@@ -13,7 +13,7 @@ const hackathonResJiraConnector = {
       apiVersion: '2',
       strictSSL: true
     });
-    return await jira.searchJira('assignee=mtolkiehn') // jira.searchJira('issue=RX-9853') jira.searchJira('Created>2017-05-30')
+    return await jira.searchJira('project=RES AND Created>2017-05-29  ') // jira.searchJira('issue=RX-9853') jira.searchJira('Created>2017-05-30')
   },
   put: async function() {
     const app = `https://resources-staging.rplan.com`
