@@ -21,6 +21,7 @@ const hackathonResJiraConnector = {
     return await request(app)
       .post(`/v2/entities?a=59132b99e4b07618a2df0af2`)
       .set('Authorization', 'bearer dea5bd6e-a38c-4add-ab5b-0452e219df1e')
+      .set('Content-Type', 'application/json')
       .send(payload)
   }
 };
