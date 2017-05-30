@@ -1,10 +1,9 @@
 // With ES6
 import JiraApi from 'jira-client';
-require("babel-polyfill");
+import babel_polyfill from "babel-polyfill";
 
 const hackathonResJiraConnector = {
   greet: async function() {
-// Initialize
     var jira = new JiraApi({
       protocol: 'https',
       host: 'jira.actano.de',
@@ -13,9 +12,10 @@ const hackathonResJiraConnector = {
       apiVersion: '2',
       strictSSL: true
     });
-    return jira.findIssue("RES-341")
-      .then(function(issue) {
-        console.log('Status: ' + issue.fields.status.name);
+    const result = await jira.searchJira('issue=RX-9853')  // searchJira('assignee=mtolkiehn')
+      .then(function(result) {
+        console.log(result)
+        console.log('Fields: ' + result.issues[0].fields);
       })
       .catch(function(err) {
         console.error(err);

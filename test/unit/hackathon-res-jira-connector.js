@@ -15,13 +15,12 @@ describe('hackathonResJiraConnector', () => {
   describe('Greet function', () => {
     beforeEach(() => {
       spy(hackathonResJiraConnector, 'greet');
-      hackathonResJiraConnector.greet();
+      //hackathonResJiraConnector.greet();
     });
 
-    it('should have been run once', async function(done) {
+    it('should have been run once', async function() {
       const result = await hackathonResJiraConnector.greet();
       console.log(result);
-      done()
     });
 
   });
